@@ -110,6 +110,36 @@ block slides
             li Mobile computing
             li   
   //-
+  //- Situ
+  //-
+  section
+    h1 situ
+    h3 A Scalable Framework for Timely Discovery and Situational Understanding of Cyber Attacks
+    p
+      img(src='img/situ-thumb.png', style='border:none;')
+  section
+    h2 situ :: problem
+    ul
+      li Cyber attacks cost commercial and governmental organizations vast dollar amounts, result in stolen intellectual property, and reveal state secrets that endanger lives
+      li Sophisticated attack groups have established a presence in the networks of many organizations
+      li Discovering novel and sophisticated cyber attacks and providing situation awareness are ongoing problems in computer network defense
+      li Cyber defense analysts maintain continually evolving mental models that allow them to differentiate between malicious and benign traffic, but current systems do not exploit this knowledge
+      li Current attack discovery systems typically focus on a single type of data, even though some sophisticated attacks can only be identified from looking at multiple data sets
+  section
+    h2 situ :: problem
+    br
+    h4 Current systems focus technologies at identifying attacks, but provide little in the way of helping analysts make rapid decisions
+  section
+    h2 situ :: approach
+    ul
+      li Anomaly detection - unsupervised, probabilistic modeling of data for different contexts allows the system to model behavior at multiple scales
+      li Event classification - supervised machine learning algorithms allow users to incorporate their own domain knowledge into the system
+      li Information visualization - real-time event visualization provides an understanding of why events are anomalous and malicious to furnish users with the information to make decisions
+      li Feedback loop - a context-aware learning feedback loop helps to provide labeled data to algorithms while minimizing the burden on users
+  section
+    p
+      img(src='img/situ.png', style='border:none;')
+  //-
   //- Health Care Projects
   //-
   section
@@ -129,18 +159,17 @@ block slides
   section
     h2 geovar :: approach
     ul
-      li Combine visualizations to show how geographic regions compare
-      li Small multiples of many indicators to compare years and indicators
+      li Small multiples of many indicators to compare geographic variations among indicators
+      li Drill in on details to see how an indicator changes over time and location
   section
     p
       img(src='img/healthgeo.png', style='border:none;')
+//    p(style='margin-top: 30px;')
+//      small
+//        a(href='http://jgoodall.github.com/projects/cms-geo/') demonstration
     p(style='margin-top: 30px;')
       small
-        a(href='http://jgoodall.github.com/projects/cms-geo/') demonstration
-    p(style='margin-top: 30px;')
-      small
-        //-a(href='http://ornl-situ.github.com/cms-geovar/') demonstration
-        a(href='http://localhost:8081/') demonstration
+        a(href='http://ornl-situ.github.io/cms-geovar/') demonstration
   section
     h1 Link-UI
     h3 Linking Data Sources into a Graph
@@ -198,35 +227,7 @@ block slides
       img(src='img/nv.png', style='border:none;')
     p(style='margin-top: 30px;')
       small
-        //-a(href='http://ornl-situ.github.com/nv/') demonstration
-        a(href='http://localhost:8083/') demonstration
-  section
-    h1 situ
-    h3 A Scalable Framework for Timely Discovery and Situational Understanding of Cyber Attacks
-    p
-      img(src='img/situ-thumb.png', style='border:none;')
-  section
-    h2 situ :: problem
-    ul
-      li Cyber attacks cost commercial and governmental organizations vast dollar amounts, result in stolen intellectual property, and reveal state secrets that endanger lives
-      li Sophisticated attack groups have established a presence in the networks of many organizations
-      li Discovering novel and sophisticated cyber attacks and providing situation awareness are ongoing problems in computer network defense
-      li Cyber defense analysts maintain continually evolving mental models that allow them to differentiate between malicious and benign traffic, but current systems do not exploit this knowledge
-      li Current attack discovery systems typically focus on a single type of data, even though some sophisticated attacks can only be identified from looking at multiple data sets
-  section
-    h2 situ :: problem
-    br
-    h4 Current systems focus technologies at identifying attacks, but provide little in the way of helping analysts make rapid decisions
-  section
-    h2 situ :: approach
-    ul
-      li Anomaly detection - unsupervised, probabilistic modeling of data for different contexts allows the system to model behavior at multiple scales
-      li Event classification - supervised machine learning algorithms allow users to incorporate their own domain knowledge into the system
-      li Information visualization - real-time event visualization provides an understanding of why events are anomalous and malicious to furnish users with the information to make decisions
-      li Feedback loop - a context-aware learning feedback loop helps to provide labeled data to algorithms while minimizing the burden on users
-  section
-    p
-      img(src='img/situ.png', style='border:none;')
+        a(href='http://ornl-situ.github.io/nv/') demonstration
   section
     h1 Visual Analytics
     h5 Oak Ridge National Laboratory
