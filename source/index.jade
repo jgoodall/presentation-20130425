@@ -3,17 +3,14 @@ extends includes/layout
 block slides
   //- each slide should start with section, or nest sections for vertical
   section
-    h1 Visual Analytics
+    h1 Situation Awareness and Visual Analytics
     h5 Oak Ridge National Laboratory
     h6(style='font-size: 75%;margin-top:-20px') Cyberspace Sciences and Information Intelligence Research Group
-    br
     p John Goodall
-    br
     p
       small Team Lead, Situation Awareness and Visual Analytics team
       br
       small 865-446-0611 / jgoodall@ornl.gov
-      br
     p
       img(src='img/sava.png', style='border:none;')
   //-
@@ -22,10 +19,176 @@ block slides
   section
     h2 Agenda
     ul
-      li What is <strong>Visual Analytics</strong>?
-      li SAVA Research Team
-      li Health Care Projects
-      li Cyber Security Projects
+      li Background
+      li <strong>Situation Awareness</strong>
+      li Situation Awareness Projects
+        ul
+          li Attack discovery: situ
+          li Contextual understanding: stucco
+      li <strong>Visual Analytics</strong>
+      li Visual Analytics Projects
+        ul
+          li Health Care: geovar, link
+          li Cyber Security: nv
+  //-
+  //- Background
+  //-
+  section
+    h1 Background
+    ul
+      li Education
+        ul
+          li BA in History, Binghamton University
+          li PhD in Information Systems, UMBC
+            | <br>
+            | <em style="font-size:85%">Defending the Network: Visualizing Network Packets for Intrusion Detection Analysis</em>
+      li Professional
+        ul
+          li Systems Administrator, UMBC
+          li Research Scientist, Secure Decisions
+          li Research Scientist/Team Lead, ORNL
+      li Service
+        ul
+          li VizSec, Organizing Committee, 2007 - 2013
+          li IEEE InfoVis, PC, 2011 - 2013
+          li ACM CHIMIT, PC, 2008 - 2009
+  section
+    h2 Research Background
+    ul
+      li Visual analytics
+      li Information visualization
+      li Human-computer interaction
+      li Computer network defense
+      li Computer-supported cooperative work
+      li Qualitative research methods
+  section
+    h2 SAVA Team Research Areas
+    div(style='font-size: 28px;')
+      ul
+        li Mathematics
+          ul(style='list-style: none;')
+            li Probabilistic modeling
+            li Graph modeling & algorithms
+            li Theorems
+        li Human-Computer Interaction
+          ul(style='list-style: none;')
+            li Information visualization
+            li Use-centered design
+            li Domain and user modeling
+            li User testing / experimentation
+      ul
+        li Machine Learning
+          ul(style='list-style: none;')
+            li Unsupervised learning
+            li Active learning
+            li Online learning
+        li Computing Platforms
+          ul(style='list-style: none;')
+            li Streaming platforms & algorithms
+            li Distributed storage & algorithms
+            li Mobile computing
+            li   
+  //-
+  //- What is SA?
+  //-
+  section
+    h1 What is Situation Awareness?
+    p
+      img(src='img/sava-small.png', style='border:none;')    
+  section
+    h2 Situation Awareness
+    blockquote(style='font-size: 140%;') The continuous extraction of environmental information along with integration of this information with previous knowledge to form a coherent mental picture, and the end use of that mental picture in directing further perception and anticipating future need.
+    p(style='text-align: right; font-size: 65%;')
+      | - Dominguez, et al, 1994
+  section
+    h2 Situation Awareness
+    blockquote(style='font-size: 140%;') Knowing what is going on so you can figure out what to do.
+    p(style='text-align: right; font-size: 65%;')
+      | - Adam, 1983
+  section
+    h2 SA for Cyber Security
+    ul
+      li <strong>Design for scale</strong> - even on small networks, huge volumes of data from many different kinds of sensors
+      li <strong>Process in real-time</strong> - an intruder can be there and gone by the time an attack is discovered
+      li <strong>Integrate domain knowledge</strong> - analysts are extremely knowledgeable in their domain and in their environment
+      li <strong>Provide context</strong> - analysts require contextual understanding of an event to make decisions
+  //-
+  //- Situ
+  //-
+  section
+    h1 situ
+    h3 A Scalable Framework for Timely Discovery and Situational Understanding of Cyber Attacks
+    p
+      img(src='img/situ-thumb.png', style='border:none;')
+  section
+    h2 situ :: motivation
+    p(style='font-size: 140%; text-align: left;') <strong>$114 Billion</strong>: Annual financial cost of cybercrime
+      | 
+      | <strong>$278 Billion</strong>: Additional cost of lost time
+    br
+    p(style='text-align: right; font-size: 65%;')
+      | - Symantec Study, 2011
+    br
+    p(style='font-size: 140%; text-align: left;')  Sophisticated attack groups have established a presence in the networks of many organizations
+  section
+    h2 situ :: problem
+    ul
+      li Discovering novel and sophisticated cyber attacks and providing situation awareness are ongoing problems in computer network defense
+      li Cyber defense analysts maintain continually evolving mental models that allow them to differentiate between malicious and benign traffic, but current systems do not exploit this knowledge
+      li Current attack discovery systems typically focus on a single type of data, even though some sophisticated attacks can only be identified from looking at multiple data sets
+  section
+    h2 situ :: problem
+    br
+    h4 Current systems focus technologies at identifying attacks, but provide little in the way of helping analysts make rapid decisions
+  section
+    h2 situ :: approach
+    ul
+      li Anomaly detection - unsupervised, probabilistic modeling of data for different contexts allows the system to model behavior at multiple scales
+      li Event classification - supervised machine learning algorithms allow users to incorporate their own domain knowledge into the system
+      li Information visualization - real-time event visualization provides an understanding of why events are anomalous and malicious to furnish users with the information to make decisions
+      li Feedback loop - a context-aware learning feedback loop helps to provide labeled data to algorithms while minimizing the burden on users
+  section
+    p
+      img(src='img/situ-architecture.png', style='border:none;')
+  section
+    p
+      img(src='img/situ.png', style='border:none;')
+  //-
+  //- Stucco
+  //-
+  section
+    h1 Stucco
+    h3 Situation and Threat Understanding by Correlating Contextual Observations
+    p
+      img(src='img/stucco-thumb.png', style='border:none;')
+  section
+    h2 stucco :: problem
+    ul
+      li To make decisions about security events, analysts require <strong>context</strong>
+      li Trigger events (e.g. IDS alerts) rarely include the much needed context
+      li Analysts must manually locate, collect and synthesize relevant data from a variety of sources to construct a contextual understanding of an event
+  section
+    h2 stucco :: overview
+    p(style='text-align:left;') Stucco will collect data sources not typically integrated into security systems and extract relevant data into a <strong>knowledge graph</strong> to accelerate situational understanding
+  section
+    h2 stucco :: philosophy
+    ul
+      li Users need <strong>information</strong> to gain situational understanding – not more data
+        ul
+          li Our focus is not simply collecting more data and indexing or clustering documents
+          li Our focus is to organize domain concepts that match the way analysts think and facilitate understanding
+      li Users need a place to store and retrieve <strong>their knowledge</strong>
+        ul
+          li Our focus is not just on retrieval, but on providing a space to collaborate on incidents
+          li Our focus is on creating a knowledge graph that includes both domain and situated knowledge
+  section
+    h2 stucco :: ontology
+    p
+      img(src='img/stucco-ontology.png', style='border:none;')
+  section
+    h2 stucco :: architecture
+    p
+      img(src='img/stucco-arch.png', style='border:none;')
   //-
   //- What is Visual Analytics?
   //-
@@ -57,89 +220,6 @@ block slides
     br
     h3 Visualization + Computation
   //-
-  //- SAVA Research Team
-  //-
-  section
-    h1 SAVA Research Team
-    p
-      img(src='img/sava-small.png', style='border:none;')    
-  section
-    h2 Mission
-    p(style='font-size: 1.5em; text-align:left') Develop situation awareness and visual analytics tools, methods and platforms to facilitate <strong>situational understanding</strong> and <strong>insight discovery</strong> from large, complex, heterogeneous data
-    aside.notes
-      | Our mission is to enable users to discover facts about their data, or connections within their data, that would otherwise remain hidden.
-  section
-    h2 Approach to Visual Analytics
-    ul
-      li Automate the repetitive and the mundane
-      li Algorithms should not relearn domain knowledge
-      li Users' domain knowledge should be captured and used
-      li Algorithms should be transparent and understandable
-      li Simple displays are good (and better when combined)
-      li Visualizations do not always have to be intuitive
-      li Give users time to slow down to explore the data
-  section
-    h2 Research Areas
-    div(style='font-size: 28px;')
-      ul
-        li
-          | Mathematics
-          ul(style='list-style: none;')
-            li Probabilistic modeling
-            li Graph modeling & algorithms
-            li Theorems
-        li
-          | Human-Computer Interaction
-          ul(style='list-style: none;')
-            li Information visualization
-            li Use-centered design
-            li Domain and user modeling
-            li User testing / experimentation
-      ul
-        li
-          | Machine Learning
-          ul(style='list-style: none;')
-            li Unsupervised learning
-            li Active learning
-            li Online learning
-        li
-          | Computing Platforms
-          ul(style='list-style: none;')
-            li Streaming platforms & algorithms
-            li Distributed storage & algorithms
-            li Mobile computing
-            li   
-  //-
-  //- Situ
-  //-
-  section
-    h1 situ
-    h3 A Scalable Framework for Timely Discovery and Situational Understanding of Cyber Attacks
-    p
-      img(src='img/situ-thumb.png', style='border:none;')
-  section
-    h2 situ :: problem
-    ul
-      li Cyber attacks cost commercial and governmental organizations vast dollar amounts, result in stolen intellectual property, and reveal state secrets that endanger lives
-      li Sophisticated attack groups have established a presence in the networks of many organizations
-      li Discovering novel and sophisticated cyber attacks and providing situation awareness are ongoing problems in computer network defense
-      li Cyber defense analysts maintain continually evolving mental models that allow them to differentiate between malicious and benign traffic, but current systems do not exploit this knowledge
-      li Current attack discovery systems typically focus on a single type of data, even though some sophisticated attacks can only be identified from looking at multiple data sets
-  section
-    h2 situ :: problem
-    br
-    h4 Current systems focus technologies at identifying attacks, but provide little in the way of helping analysts make rapid decisions
-  section
-    h2 situ :: approach
-    ul
-      li Anomaly detection - unsupervised, probabilistic modeling of data for different contexts allows the system to model behavior at multiple scales
-      li Event classification - supervised machine learning algorithms allow users to incorporate their own domain knowledge into the system
-      li Information visualization - real-time event visualization provides an understanding of why events are anomalous and malicious to furnish users with the information to make decisions
-      li Feedback loop - a context-aware learning feedback loop helps to provide labeled data to algorithms while minimizing the burden on users
-  section
-    p
-      img(src='img/situ.png', style='border:none;')
-  //-
   //- Health Care Projects
   //-
   section
@@ -170,17 +250,17 @@ block slides
         | 
         a(href='http://jgoodall.github.com/projects/cms-geo/') demonstration (details)
   section
-    h1 Link-UI
-    h3 Linking Data Sources into a Graph
+    h1 Link
+    h3 Schema matching across data sources
     p
       img(src='img/linkui-thumb.png', style='border:none;')    
   section
-    h2 link-ui :: problem
+    h2 link :: problem
     ul
       li Schema matching - identifying related objects for joining disparate data sets - is often required to gain insight into complex phenomenon
       li Schema matching is a difficult, typically manual, process that requires domain expertise and time to comb through data and meta-data
   section
-    h2 link-ui :: approach
+    h2 link :: approach
     ul
       li Probabilistic modeling of the values of each field to identify possible matches for each pair of fields
       li Visualization to let the user correct or add links to each field
@@ -228,16 +308,21 @@ block slides
       small
         a(href='http://ornl-situ.github.io/nv/') demonstration
   section
-    h1 Visual Analytics
+    h2 Common themes
+    ul
+      li Visualization is required to make information understandable
+      li Visualization on the web is now possible - still have to make it scale
+      li Visualization is most powerful when combined with computation
+      li Users have lots of domain knowledge - capture and make use of it
+      li 'Big data' is about more than volume - speed is especially important in cyber security
+  section
+    h1 Situation Awareness and Visual Analytics
     h5 Oak Ridge National Laboratory
     h6(style='font-size: 75%;margin-top:-20px') Cyberspace Sciences and Information Intelligence Research Group
-    br
     p John Goodall
-    br
-    p |
+    p
       small Team Lead, Situation Awareness and Visual Analytics team
       br
       small 865-446-0611 / jgoodall@ornl.gov
-      br
     p
       img(src='img/sava.png', style='border:none;')
